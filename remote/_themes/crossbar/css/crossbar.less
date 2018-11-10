@@ -1,0 +1,207 @@
+//variables first
+
+// colors
+@white:		#ffffff;
+@black:		#000000;
+@25black:		fadeout(@black, 25%);
+@red:		#ea002a;
+@violet:		#9e1d97;
+@blue:		#0081bc;
+
+// typography
+
+/* yo */
+
+@rem: 20px;
+
+// buttons
+.button {
+	background-color: @25black;
+	font-family: inherit;
+}
+
+body {
+	font-family: Chivo, Tahoma, "Droid Sans", Verdana, sans-serif;
+	font-weight: 400;
+	// 300, 400, 500, 700, 900
+	font-style: normal;
+	font-size: @rem;
+	height: 100%;
+}
+
+h {
+	&1, &2, &3, &4, &5, &6 {
+		font-family: Chivo, Tahoma, "Droid Sans", Verdana, sans-serif;
+		color: @25black;
+		font-weight: 900;
+	}
+}
+
+p, ul, ol, li {
+	font-size: inherit;
+}
+
+.site- {
+	&header {
+		padding:  .5em 0;
+		text-align: center;
+	}
+	&title, &mission {
+		color: @black;
+
+	}
+	&sample- {
+
+		&name {
+			
+			color: lighten(@black, 50%);
+			text-align: center;
+			
+			margin-bottom: 0;
+			padding: 1em 0;
+			font-size: 62%;
+		}
+		&image {
+			
+			width: 100%;
+		}
+	}
+}
+.foundry- {
+	&sample- {
+		&name {
+			
+			color: @black;
+			text-align: center;
+			
+			margin-bottom: 0;
+			padding: 1em 0;
+
+		}
+	}
+}
+
+.section {
+	margin: 2em 0 0; padding: 0;
+
+	&.contents {
+		margin-top: 0;
+	}
+
+
+	&.banner {
+		margin: 0; padding: 0;
+		background: @black;
+	}
+}
+.typefaces {
+
+
+	article {
+
+	}
+}
+.foundries {
+
+}
+.typefaces + .foundries {
+
+}
+header, footer {
+	background: lighten(@black, 95%);
+}
+header {
+	background: @white;
+}
+footer {
+
+	padding: 2em 0;
+	border-top: 1px dashed @black;
+}
+
+
+// nav rules
+.top-bar-section ul li > a {
+	color: @25black;
+	padding: 12px 0px 12px 0.9375rem;
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: normal;
+	text-transform: none;
+}
+.top-bar .name h1 a {
+    font-weight: normal;
+    font-size: 1.5em;
+    color: @25black;
+    width: 100%;
+}
+
+.hr {
+	height: 1px; 
+	border-top: 1px dashed lighten(@black, 50%);;
+	margin-top: 2em;
+}
+
+.top-bar {
+	background: transparent;
+	&.expanded {
+		& .title-area {
+			background: transparent;
+
+			a {
+				color: @white;
+			}
+		}
+	}
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+	padding: 0px 0.9375rem;
+	line-height: 2.8125rem;
+	background: transparent none repeat scroll 0% 0%;
+}
+.top-bar-section ul li {
+    background-color: transparent;
+}
+.nav-menu {
+	background: transparent;
+}
+.design-credit {
+	padding: 20px 0;
+	background: lighten(@black, 20%);
+	img {
+		width: 100%; max-width: 100px;
+	}
+}
+
+.block-link {
+	border: 1px solid #eee;
+	display: block;
+	height: auto;
+	margin-bottom: @rem * 1.25;
+}
+.flex-parent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+.type-sample {
+	width: calc(48%);
+}
+.button {
+	font-size: @rem;
+}
+@media screen and ( min-width: 599px ) {
+	.type-sample {
+		width: calc( 33% - 5px );
+	}
+	
+}
+@media screen and ( min-width: 768px ) {
+	.type-sample {
+		width: calc( 33% - 5px );
+	}
+	
+}
